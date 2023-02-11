@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <title>CICR PROJECT</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="author" content="Váradi-Szabó András">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Style/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Jquery/jquery-3.6.0.js"></script>
+    <script src="./Jquery/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="./Scripts/myScript.js"></script>
+  
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./Images/CICR_logo_no_bg.png" />
+    <script src="./Scripts/Header.js"></script>
+  </head>
+
+  <body id="indexBody">
+    <div class="container1">
+      <p id="ProjectNameMobile">CICR PROJECT</p>
+
+      <div id="myLinks">
+        <nav>
+          <p id="ProjectName">CICR PROJECT</p>
+          <ul>
+            <li id="ENGHUPage"><a href="./questionseng.html">ENG</a></li>
+            <li id="NavSolution" onclick="FunctionSolution()"><a href="./index.html">Megoldásunk</a></li>
+            <li id="NavProduct" onclick="FunctionProduct()"><a href="./index.html">Termék</a></li>
+            <li id="NavTeam" onclick="FunctionTeam()"><a href="./index.html">Csapatunk</a></li>
+            <li id="NavCaseStudies" onclick="FunctionCaseStudies()"><a href="./index.html">Esettanulmány</a></li>
+            <li id="NavContact" onclick="FunctionContact()"><a href="./index.html">Kapcsolat</a></li>
+          </ul>
+        </nav>
+      </div>
+      <i id="MenuIcon" class="fa fa-bars" onclick="menu()"></i>
+
+      <div id="progress">
+        <div>
+          <!-- <h2 class="progressnumber" id="progressnumber0">0/6</h2> -->
+          <h2 class="progressnumber" id="progressnumber1">1/6</h2>
+          <h2 class="progressnumber" id="progressnumber2">2/6</h2>
+          <h2 class="progressnumber" id="progressnumber3">3/6</h2>
+          <h2 class="progressnumber" id="progressnumber4">4/6</h2>
+          <h2 class="progressnumber" id="progressnumber5">5/6</h2>
+          <h2 class="progressnumber" id="progressnumber6">6/6</h2>
+        </div>
+        
+        <article class="progressbar">
+          <div class="progressbarpart" id="progressbarpart1"></div>
+          <div class="progressbarpart" id="progressbarpart2"></div>
+          <div class="progressbarpart" id="progressbarpart3"></div>
+          <div class="progressbarpart" id="progressbarpart4"></div>
+          <div class="progressbarpart" id="progressbarpart5"></div>
+          <div class="progressbarpart" id="progressbarpart6"></div>
+        </article>
+  
+      </div>
+      
+      <h2 id="Recommendtxt">A válaszaid alapján a következő tárcákat javasoljuk:</h2>
+      <div id="questionsWallets">
+        <!-- <form class="question" id="question0" action="javascript:question0next()" method="post" novalidate>
+          <label class="question0label">Születési dátum:<br><input type="date" name="question0date" id="question0date"></label>
+          <label class="question0label">Kedvenc szín:<br><input type="color" name="question0color" id="question0color"></label>
+          <div class="errorTxt"></div>
+          <div class="questionbuttons">
+            <input class="ButtonQuestionButton" type="submit" value="Next">
+            
+          </div>
+        </form> -->
+        
+        
+        <form class="question" id="question1" action="javascript:question1next();question1getanswer();" method="post" novalidate>
+          <h2>Melyik országban élsz?</h2>
+          <select class="indropdown" id="inCountry" name="inCountry">
+            <option disabled selected value> Ország </option>
+            <option>Afghanistan</option>
+            <option>Albania</option>
+            <option>Algeria</option>
+            <option>Andorra</option>
+            <option>Angola</option>
+            <option>Antigua and Barbuda</option>
+            <option>Argentina</option>
+            <option>Armenia</option>
+            <option>Australia</option>
+            <option>Austria</option>
+            <option>Azerbaijan</option>
+            <option>Bahamas</option>
+            <option>Bahrain</option>
+            <option>Bangladesh</option>
+            <option>Barbados</option>
+            <option>Belarus</option>
+            <option>Belgium</option>
+            <option>Belize</option>
+            <option>Benin</option>
+            <option>Bhutan</option>
+            <option>Bolivia</option>
+            <option>Bosnia and Herzegovina</option>
+            <option>Botswana</option>
+            <option>Brazil</option>
+            <option>Brunei</option>
+            <option>Bulgaria</option>
+            <option>Burkina Faso</option>
+            <option>Burundi</option>
+            <option>Côte d'Ivoire</option>
+            <option>Cabo Verde</option>
+            <option>Cambodia</option>
+            <option>Cameroon</option>
+            <option>Canada</option>
+            <option>Central African Republic</option>
+            <option>Chad</option>
+            <option>Chile</option>
+            <option>China</option>
+            <option>Colombia</option>
+            <option>Comoros</option>
+            <option>Congo (Congo-Brazzaville)</option>
+            <option>Costa Rica</option>
+            <option>Croatia</option>
+            <option>Cuba</option>
+            <option>Cyprus</option>
+            <option>Czechia (Czech Republic)</option>
+            <option>DR of the Congo</option>
+            <option>Denmark</option>
+            <option>Djibouti</option>
+            <option>Dominica</option>
+            <option>Dominican Republic</option>
+            <option>Ecuador</option>
+            <option>Egypt</option>
+            <option>El Salvador</option>
+            <option>Equatorial Guinea</option>
+            <option>Eritrea</option>
+            <option>Estonia</option>
+            <option>Eswatini</option>
+            <option>Ethiopia</option>
+            <option>Fiji</option>
+            <option>Finland</option>
+            <option>France</option>
+            <option>Gabon</option>
+            <option>Gambia</option>
+            <option>Georgia</option>
+            <option>Germany</option>
+            <option>Ghana</option>
+            <option>Greece</option>
+            <option>Grenada</option>
+            <option>Guatemala</option>
+            <option>Guinea</option>
+            <option>Guinea-Bissau</option>
+            <option>Guyana</option>
+            <option>Haiti</option>
+            <option>Holy See</option>
+            <option>Honduras</option>
+            <option>Hungary</option>
+            <option>Iceland</option>
+            <option>India</option>
+            <option>Indonesia</option>
+            <option>Iran</option>
+            <option>Iraq</option>
+            <option>Ireland</option>
+            <option>Israel</option>
+            <option>Italy</option>
+            <option>Jamaica</option>
+            <option>Japan</option>
+            <option>Jordan</option>
+            <option>Kazakhstan</option>
+            <option>Kenya</option>
+            <option>Kiribati</option>
+            <option>Kuwait</option>
+            <option>Kyrgyzstan</option>
+            <option>Laos</option>
+            <option>Latvia</option>
+            <option>Lebanon</option>
+            <option>Lesotho</option>
+            <option>Liberia</option>
+            <option>Libya</option>
+            <option>Liechtenstein</option>
+            <option>Lithuania</option>
+            <option>Luxembourg</option>
+            <option>Madagascar</option>
+            <option>Malawi</option>
+            <option>Malaysia</option>
+            <option>Maldives</option>
+            <option>Mali</option>
+            <option>Malta</option>
+            <option>Marshall Islands</option>
+            <option>Mauritania</option>
+            <option>Mauritius</option>
+            <option>Mexico</option>
+            <option>Micronesia</option>
+            <option>Moldova</option>
+            <option>Monaco</option>
+            <option>Mongolia</option>
+            <option>Montenegro</option>
+            <option>Morocco</option>
+            <option>Mozambique</option>
+            <option>Myanmar</option>
+            <option>Namibia</option>
+            <option>Nauru</option>
+            <option>Nepal</option>
+            <option>Netherlands</option>
+            <option>New Zealand</option>
+            <option>Nicaragua</option>
+            <option>Niger</option>
+            <option>Nigeria</option>
+            <option>North Korea</option>
+            <option>North Macedonia</option>
+            <option>Norway</option>
+            <option>Oman</option>
+            <option>Pakistan</option>
+            <option>Palau</option>
+            <option>Palestine State</option>
+            <option>Panama</option>
+            <option>Papua New Guinea</option>
+            <option>Paraguay</option>
+            <option>Peru</option>
+            <option>Philippines</option>
+            <option>Poland</option>
+            <option>Portugal</option>
+            <option>Qatar</option>
+            <option>Romania</option>
+            <option>Russia</option>
+            <option>Rwanda</option>
+            <option>Saint Kitts and Nevis</option>
+            <option>Saint Lucia</option>
+            <option>Saint Vincent/Grenadines</option>
+            <option>Samoa</option>
+            <option>San Marino</option>
+            <option>Sao Tome and Principe</option>
+            <option>Saudi Arabia</option>
+            <option>Senegal</option>
+            <option>Serbia</option>
+            <option>Seychelles</option>
+            <option>Sierra Leone</option>
+            <option>Singapore</option>
+            <option>Slovakia</option>
+            <option>Slovenia</option>
+            <option>Solomon Islands</option>
+            <option>Somalia</option>
+            <option>South Africa</option>
+            <option>South Korea</option>
+            <option>South Sudan</option>
+            <option>Spain</option>
+            <option>Sri Lanka</option>
+            <option>Sudan</option>
+            <option>Suriname</option>
+            <option>Sweden</option>
+            <option>Switzerland</option>
+            <option>Syria</option>
+            <option>Tajikistan</option>
+            <option>Tanzania</option>
+            <option>Thailand</option>
+            <option>Timor-Leste</option>
+            <option>Togo</option>
+            <option>Tonga</option>
+            <option>Trinidad/Tobago</option>
+            <option>Tunisia</option>
+            <option>Turkey</option>
+            <option>Turkmenistan</option>
+            <option>Tuvalu</option>
+            <option>Uganda</option>
+            <option>Ukraine</option>
+            <option>United Arab Emirates</option>
+            <option>United Kingdom</option>
+            <option>United States</option>
+            <option>Uruguay</option>
+            <option>Uzbekistan</option>
+            <option>Vanuatu</option>
+            <option>Venezuela</option>
+            <option>Vietnam</option>
+            <option>Yemen</option>
+            <option>Zambia</option>
+            <option>Zimbabwe</option>
+          </select>
+
+          
+          <div class="errorTxt"></div>
+          <div class="questionbuttons">
+            <input class="ButtonQuestionButton" type="submit" value="Next">
+            <!-- <input class="ButtonQuestionButton" type="button" value="Back" onclick="question1back()"> -->
+          </div>
+          
+        </form>
+  
+        <form class="question" id="question2" action="javascript:question2next();question2getanswer();">
+          <h2>Mennyi tapasztalattal rendelkezel a kriptovaluták terén?</h2>
+          <label><input name="Exprerience" class="inratio" type="radio" id="question2radio1">Nem rendelkezem korábbi tapasztalattal, vagy csak korlátozott tudással rendelkezem befektetés terén</label>
+          <label><input name="Exprerience" class="inratio" type="radio" id="question2radio2">Ismerem az alapokat, és érdekel ez a technológia</label>
+          <label><input name="Exprerience" class="inratio" type="radio" id="question2radio3">Volt már több sikeres/sikertelen tranzakcióm, de átlátom a piacot</label>
+          <label><input name="Exprerience" class="inratio" type="radio" id="question2radio4">Teljes magabiztonsággal állíthatom, hogy profi vagyok</label>
+          <div class="errorTxt"></div>
+          <div class="questionbuttons">
+            <input class="ButtonQuestionButton" type="submit" value="Next">
+            <input class="ButtonQuestionButton" type="button" value="Back" onclick="question2back();question1getanswerBack()">
+          </div>
+        </form>
+  
+        <form class="question" id="question3" action="javascript:question3next();question3getanswer();">
+          <h2>Hol szeretnéd tárolni a kriptovalutáidat?</h2>
+          <label ><input name="safety" class="inratio" type="radio" id="question3radio1"> <div class="labeltooltip">Olyan helyen, ahol rendelkezem a <abbr class="tooltip" title="Ha csak te ismered a privát kulcsod akkor senki más nem férhet hozzá a token-jeidhez">saját privát kulcsommal</abbr></div></label>
+          <label><input name="safety" class="inratio" type="radio" id="question3radio2">Centralizált oldalon</label>
+          <div class="errorTxt"></div>
+          <div class="questionbuttons">
+            <input class="ButtonQuestionButton" type="submit" value="Next">
+            <input class="ButtonQuestionButton" type="button" value="Back" onclick="question3back();question2getanswerBack()">
+          </div>
+        </form>
+  
+        <form class="question" id="question4" action="javascript:question4next();question4getanswer();">
+          <h2>Hol szeretnél kereskedni?</h2>
+          <label><input name="Centralised" class="inratio" type="radio" id="question4radio1">Centralizált oldalon</label>
+          <label><input name="Centralised" class="inratio" type="radio" id="question4radio2">Decentralizált oldalon</label>
+          <label><input name="Centralised" class="inratio" type="radio" id="question4radio3">Nem szeretnék kereskedni, csak tárolni</label>
+
+          <div class="errorTxt"></div>
+          <div class="questionbuttons">
+            <input class="ButtonQuestionButton" type="submit" value="Next">
+            <input class="ButtonQuestionButton" type="button" value="Back" onclick="question4back();question3getanswerBack()">
+          </div>
+        </form>
+  
+        <form class="question" id="question5" action="javascript:question5next();question5getanswer();">
+          <h2>Milyen gyakran hajtanál végre tranzakciókat?</h2>
+          <label><input name="frequency" class="inratio" type="radio" id="question5radio1">Napi szinten</label>
+          <label><input name="frequency" class="inratio" type="radio" id="question5radio2">Heti szinten</label>
+          <label><input name="frequency" class="inratio" type="radio" id="question5radio3">Havi szinten</label>
+          <label><input name="frequency" class="inratio" type="radio" id="question5radio4">Ritkábban</label>
+          <div class="errorTxt"></div>
+          <div class="questionbuttons">
+            <input class="ButtonQuestionButton" type="submit" value="Next">
+            <input class="ButtonQuestionButton" type="button" value="Back" onclick="question5back();question4getanswerBack()">
+          </div>
+        </form>
+  
+        <form class="question" id="question6" action="javascript:question6submit();question6getanswer();">
+          <h2>Mire használnád leginkább a walletet</h2>
+          <label><input name="UsedFor" class="incheckbox" type="checkbox" id="question6checkbox1">HODL (ritkább használat)</label>
+          <label><input name="UsedFor" class="incheckbox" type="checkbox" id="question6checkbox2">Earning Stakelés</label>
+          <label><input name="UsedFor" class="incheckbox" type="checkbox" id="question6checkbox3">NFT birtoklás és tárolás </label>
+          <label><input name="UsedFor" class="incheckbox" type="checkbox" id="question6checkbox4">Több különböző blokkláncon lévő token tárolására</label>
+          <label><input name="UsedFor" class="incheckbox" type="checkbox" id="question6checkbox5"> <abbr class="tooltip" title="Decentralizált oldalon szeretnék likviditást adni az cégnek">Swapolás / DeFi</abbr></label>
+          <label><input name="UsedFor" class="incheckbox" type="checkbox" id="question6checkbox6">Egy Layer-1 token tárolása/stakelése</label>
+          <div class="errorTxt"></div>
+          <div class="questionbuttons">
+            <input class="ButtonQuestionButton" type="submit" value="Submit">
+            <input class="ButtonQuestionButton" type="button" value="Back" onclick="question6back();question5getanswerBack()">
+          </div>
+        </form>
+        
+        
+        
+        <article id="Wallets">
+          <div class="walletplace" id="walletplace1">
+            <a target="_blank" href="https://www.binance.com/en"><img id="binance1" class="walletlogoimg" src="./Images/Wallets_logo/binance-logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.bitmex.com/"><img id="bitmex1" class="walletlogoimg" src="./Images/Wallets_logo/bitmex_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://cex.io/"><img id="cexio1" class="walletlogoimg" src="./Images/Wallets_logo/cex_io_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.coinbase.com/"><img id="coinbase1" class="walletlogoimg" src="./Images/Wallets_logo/coinbase-logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://crypto.com/"><img id="cryptocom1" class="walletlogoimg" src="./Images/Wallets_logo/crypto_com_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.ledger.com/"><img id="ledger1" class="walletlogoimg" src="./Images/Wallets_logo/ledger_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://trezor.io/"><img id="trezor1" class="walletlogoimg" src="./Images/Wallets_logo/trezor_logo.png" alt="binance-logo"></a>
+          </div>
+          <div class="walletplace" id="walletplace2">
+            <a target="_blank" href="https://www.binance.com/en"><img id="binance2" class="walletlogoimg" src="./Images/Wallets_logo/binance-logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.bitmex.com/"><img id="bitmex2" class="walletlogoimg" src="./Images/Wallets_logo/bitmex_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://cex.io/"><img id="cexio2" class="walletlogoimg" src="./Images/Wallets_logo/cex_io_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.coinbase.com/"><img id="coinbase2" class="walletlogoimg" src="./Images/Wallets_logo/coinbase-logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://crypto.com/"><img id="cryptocom2" class="walletlogoimg" src="./Images/Wallets_logo/crypto_com_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.ledger.com/"><img id="ledger2" class="walletlogoimg" src="./Images/Wallets_logo/ledger_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://trezor.io/"><img id="trezor2" class="walletlogoimg" src="./Images/Wallets_logo/trezor_logo.png" alt="binance-logo"></a>
+          </div>  
+          <div class="walletplace" id="walletplace3">
+            <a target="_blank" href="https://www.binance.com/en"><img id="binance3" class="walletlogoimg" src="./Images/Wallets_logo/binance-logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.bitmex.com/"><img id="bitmex3" class="walletlogoimg" src="./Images/Wallets_logo/bitmex_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://cex.io/"><img id="cexio3" class="walletlogoimg" src="./Images/Wallets_logo/cex_io_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.coinbase.com/"><img id="coinbase3" class="walletlogoimg" src="./Images/Wallets_logo/coinbase-logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://crypto.com/"><img id="cryptocom3" class="walletlogoimg" src="./Images/Wallets_logo/crypto_com_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.ledger.com/"><img id="ledger3" class="walletlogoimg" src="./Images/Wallets_logo/ledger_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://trezor.io/"><img id="trezor3" class="walletlogoimg" src="./Images/Wallets_logo/trezor_logo.png" alt="binance-logo"></a>
+          </div>  
+          <div class="walletplace" id="walletplace4">
+            <a target="_blank" href="https://www.binance.com/en"><img id="binance4" class="walletlogoimg" src="./Images/Wallets_logo/binance-logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.bitmex.com/"><img id="bitmex4" class="walletlogoimg" src="./Images/Wallets_logo/bitmex_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://cex.io/"><img id="cexio4" class="walletlogoimg" src="./Images/Wallets_logo/cex_io_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.coinbase.com/"><img id="coinbase4" class="walletlogoimg" src="./Images/Wallets_logo/coinbase-logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://crypto.com/"><img id="cryptocom4" class="walletlogoimg" src="./Images/Wallets_logo/crypto_com_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.ledger.com/"><img id="ledger4" class="walletlogoimg" src="./Images/Wallets_logo/ledger_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://trezor.io/"><img id="trezor4" class="walletlogoimg" src="./Images/Wallets_logo/trezor_logo.png" alt="binance-logo"></a>
+          </div>  
+          <div class="walletplace" id="walletplace5">
+            <a target="_blank" href="https://www.binance.com/en"><img id="binance5" class="walletlogoimg" src="./Images/Wallets_logo/binance-logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.bitmex.com/"><img id="bitmex5" class="walletlogoimg" src="./Images/Wallets_logo/bitmex_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://cex.io/"><img id="cexio5" class="walletlogoimg" src="./Images/Wallets_logo/cex_io_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.coinbase.com/"><img id="coinbase5" class="walletlogoimg" src="./Images/Wallets_logo/coinbase-logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://crypto.com/"><img id="cryptocom5" class="walletlogoimg" src="./Images/Wallets_logo/crypto_com_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://www.ledger.com/"><img id="ledger5" class="walletlogoimg" src="./Images/Wallets_logo/ledger_logo.png" alt="binance-logo"></a>
+            <a target="_blank" href="https://trezor.io/"><img id="trezor5" class="walletlogoimg" src="./Images/Wallets_logo/trezor_logo.png" alt="binance-logo"></a>
+          </div>  
+        </article>
+        
+      </div>
+      <div id="refreshdiv">
+        <input id="Refresh" type="button" value="Újra Kitöltöm" onclick="TestRestart()">
+      </div>
+      
+      <div id="coin-listQuestion">
+        <div class="coin-list">
+          <div class="coin">
+            <img
+              src="./Images/bitcoin-btc-logo.png"
+              alt="Bitcoin"
+              width="100"
+              height="100"
+            />
+            <div class="CoinPrice">
+              <h3>$ <span id="bitcoin"></span></h3>
+              <p>Bitcoin</p>
+            </div>
+          </div>
+  
+          <div class="coin">
+            <img 
+              src="./Images/ethereum-eth-logo.png" 
+              alt="Ethereum"
+              width="100"
+              height="100" />
+            <div class="CoinPrice">
+              <h3>$ <span id="eth"></span></h3>
+              <p>Ethereum</p>
+            </div>
+          </div>
+  
+          <div class="coin">
+            <img
+              src="./Images/bnb-bnb-logo.png"
+              alt="bnb"
+              width="100"
+              height="100"
+            />
+            <div class="CoinPrice">
+              <h3>$ <span id="bnb"></span></h3>
+              <p>BNB</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+
+      
+    </div>
+    <script src="./Scripts/myScript.js"></script>
+    <script src="./Scripts/apiCall.js"></script>
+
+    <footer>
+      <div id="FooterList">
+        <div id="FooterList1">
+          <h2>MEGOLDÁSOK</h2>
+          <p>Marketing</p>
+          <p>Analitika</p>
+          <p>Kereskedelem</p>
+          <p>Betekintés</p>
+        </div>
+        <div id="FooterList2">
+          <h2>TÁMOGATÁS</h2>
+          <p>Árazás</p>
+          <p>Dokumentáció</p>
+          <p>Útmutatók</p>
+          <p>API állapota</p>
+        </div>
+        <div id="FooterList3">
+          <h2>VÁLLALAT</h2>
+          <p>Rólunk</p>
+          <p>Blog</p>
+          <p>Sajtó</p>
+          <p>Partnerek</p>
+        </div>
+        <div id="FooterList4">
+          <h2>JOGI</h2>
+          <p>Követelés</p>
+          <p>Biztonság</p>
+          <p>Feltételek</p>
+        </div>
+      </div>
+      <div id="FooterLent">
+        <p>© 2022 CICR projekt, Inc. All Rights reserved</p>
+        <div id="FooterSocial">
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-github"></a>
+          <a href="#" class="fab fa-dribbble"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+
+</html>

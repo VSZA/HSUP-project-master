@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <title>CICR PROJECT</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="author" content="Váradi-Szabó András & Kovács Konrád">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Style/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Jquery/jquery-3.6.0.js"></script>
+    <script src="./Jquery/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="./Scripts/myScript.js"></script>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/png" href="./Images/CICR_logo_no_bg.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./Scripts/Header.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FXE6TNRFT8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-FXE6TNRFT8");
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PRK3SG3");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+
+  <body id="indexBody">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PRK3SG3"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="container1">
+      <p id="ProjectNameMobile">CICR PROJECT</p>
+
+      <div id="myLinks">
+        <nav>
+          <p id="ProjectName">CICR PROJECT</p>
+          <ul>
+            <li id="ENGHUPage"><a href="./indexeng.html">ENG</a></li>
+            <li id="NavSolution" onclick="FunctionSolution()"><a>Megoldásunk</a>
+            </li>
+            <li id="NavProduct" onclick="FunctionProduct()"><a>Termék</a></li>
+            <li id="NavTeam" onclick="FunctionTeam()"><a>Csapatunk</a></li>
+            <li id="NavCaseStudies" onclick="FunctionCaseStudies()">
+              <a>Esettanulmányok</a>
+            </li>
+            <li id="NavContact" onclick="FunctionContact()">
+              <a>Kapcsolat</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <i id="MenuIcon" class="fa fa-bars" onclick="menu()"></i>
+      <article id="HomeArticle1">
+        <div id="CicrLogoArt1">
+          <img
+            id="CicrLogoPng"
+            src="./Images/CICR_logo_no_bg.png"
+            alt="Céglogó"
+          />
+        </div>
+
+        <div id="Art1Conent">
+          <h2 id="Art1Txt1">Tudd meg számodra melyik a legideálisabb tárca.</h2>
+          <div id="Art1Buttons">
+            <button
+              onclick="window.location.href='./questions.html';"
+              class="ButtonFillOut"
+              type="button"
+            >
+              Kitöltöm
+            </button>
+            <button
+              onclick="FunctionContact()"
+              id="ButtonContactUs"
+              type="button"
+            >
+              Kapcsolat
+            </button>
+          </div>
+
+          <div id="info">
+            <div>
+              <h2 class="InfoArt1">$300b</h2>
+              <h2 class="InfoArt1">$1k</h2>
+            </div>
+            <div>
+              <p class="InfoTxtArt1">
+                Pénz mozgott már<br />az általunk ajánlott<br />walletekben
+              </p>
+              <p class="InfoTxtArt1">
+                User választotta már<br />az általunk ajánlott<br />tárcát
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="coin-list">
+        <div class="coin">
+          <img
+            src="./Images/bitcoin-btc-logo.png"
+            alt="Bitcoin"
+            width="100"
+            height="100"
+          />
+          <div class="CoinPrice">
+            <h3>$ <span id="bitcoin"></span></h3>
+            <p>Bitcoin</p>
+          </div>
+        </div>
+
+        <div class="coin">
+          <img
+            src="./Images/ethereum-eth-logo.png"
+            alt="Ethereum"
+            width="100"
+            height="100"
+          />
+          <div class="CoinPrice">
+            <h3>$ <span id="eth"></span></h3>
+            <p>Ethereum</p>
+          </div>
+        </div>
+
+        <div class="coin">
+          <img
+            src="./Images/bnb-bnb-logo.png"
+            alt="bnb"
+            width="100"
+            height="100"
+          />
+          <div class="CoinPrice">
+            <h3>$ <span id="bnb"></span></h3>
+            <p>BNB</p>
+          </div>
+        </div>
+      </div>
+
+      <article id="OurSolution">
+        <label class="toggle" id="ButtonUser">
+          <input type="checkbox" onclick="changeOurSolution()" />
+          <span class="slider"></span>
+          <span class="labels" data-on="B2B" data-off="B2C"> </span>
+        </label>
+
+        <h2>Megoldásunk</h2>
+        <p id="oursolution">
+          <b>
+            Célunk egy olyan felület megalkotása volt, amely kezdőknek és
+            haladóknak egyaránt segít megtalálni a legmegfelelőbb tárcát. Ehhez
+            néhány kérdésre kell válaszolni, hogy felmérjük a szükséges
+            igényeket, amelyek alapján ajánlunk tárcákat. Törekedtünk arra, hogy
+            ajánlatunkban az ingyenes, egyszerű kezelhetőségű tárcák is helyet
+            kapjanak a kezdő cryptosok segítésére és arra is, hogy a haladóbb
+            ismeretekkel rendelkezők is megtalálják a maguk kedvencét. Tesztünk
+            kitöltésével és az ajánlatok elfogadásával, felhasználóinkról több
+            órányi terhet igyekszünk levenni, hiszen a tárcák kínálata ma már
+            széles spektrumban mozog, és nem is biztos, hogy tudjuk merre
+            induljunk el a nagy kínálatban.</b
+          >
+        </p>
+
+        <button
+          id="ButtonInterest"
+          type="button"
+          onclick="window.location.href='./questions.html';"
+        >
+          Érdekel
+        </button>
+      </article>
+
+      <article id="Product">
+        <h2>Product</h2>
+        <img
+          id="ProductGif"
+          alt="Gif about the Product"
+          src="./Images/Product1.gif"
+        />
+        <button
+          onclick="window.location.href='./questions.html';"
+          class="ButtonFillOut"
+          type="button"
+        >
+          Kitöltöm
+        </button>
+      </article>
+      <section id="SaidAboutUs">
+        <div class="heading"><b>Rólunk</b> mondták</div>
+        <div class="wrapper">
+          <!-- Testimonials  -->
+          <div class="container">
+            <div class="profile">
+              <div class="imgBox">
+                <img
+                  src="./Images/Said_about_us/Said_about_us1.jpg"
+                  alt="Picture about a people"
+                />
+              </div>
+              <h2>Szandra</h2>
+              <h3>Felhasználó</h3>
+            </div>
+            <p>
+              <span class="fa fa-quote-left left"></span> Kezdő használóként még
+              csak ismerkedem a crypto tárcákkal, így szuper, hogy nem kell
+              minden tárca után néznem, ami rengeteg idő lenne. A teszt
+              kitöltése után, az igényeimhez alakítva kaptam konkrét
+              ajánlásokat, majd néhány kattintás után elkezdtem használni a
+              számomra legmegfelelőbbet.
+            </p>
+            <span class="fa fa-quote-right right"></span>
+            <div class="social">
+              <a href=""><i class="fab fa-linkedin"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="profile">
+              <div class="imgBox">
+                <img
+                  src="./Images/Said_about_us/Said_about_us2.jpg"
+                  alt="Picture about a people"
+                />
+              </div>
+              <h2>Tamás</h2>
+              <h3>Felhasználó</h3>
+            </div>
+            <p>
+              <span class="fa fa-quote-left left"></span> Szuper, hogy rátaláltam
+              az oldalra. Minimális időráfordítással megtaláltam a nekem
+              megfelelő tárcát. Plusz pont, hogy egy kattintás után már
+              ismerkedhettem a tárcával.
+            </p>
+            <span class="fa fa-quote-right right"></span>
+            <div class="social">
+              <a href=""><i class="fab fa-linkedin"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="profile">
+              <div class="imgBox">
+                <img
+                  src="./Images/Said_about_us/Said_about_us3.jpg"
+                  alt="Picture about a people"
+                />
+              </div>
+              <h2>Zsolt</h2>
+              <h3>Felhasználó</h3>
+            </div>
+            <p>
+              <span class="fa fa-quote-left left"></span> Elég régóta használok
+              hard walletet, de ezidáig a hot walletek világába nem mélyedtem
+              bele. Nagyon hasznosnak tartom, hogy az oldal a válaszaim alapján
+              ajánlott nekem olyan tárcát ami minden igényemet kielégíti.
+            </p>
+            <span class="fa fa-quote-right right"></span>
+            <div class="social">
+              <a href=""><i class="fab fa-linkedin"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <article id="Team">
+        <div class="floatTeam" id="teamMemberFloat1">
+          <i
+            id="floatTeamX"
+            class="fa-solid fa-xmark"
+            onclick="closegalery1()"
+          ></i>
+
+          <img class="TeamMemberFloatImg" src="./Images/Team_member/József_Till.jpg" alt="József_Till">
+          <div class="TeamMemberFloatTxt">
+            <h2>Till József</h2>
+            <p class="TeamMemberFloatp">Szakmai pályafutásomat a minőségirányítás területén töltöttem, számos fejlesztési projektben vettem részt. Mindig is szívügyem volt a minőség, amelyet kamatoztatok a projektek menedzsmentje során.<br/>A crypto világával néhány éve kezdtem el ismerkedni. Kezdetben nehéz volt összegyűjteni az információt, mellyel el lehet indulni a befektetés útján. Erre nyújt megoldást a platform.</p>
+          </div>
+        </div>
+
+        <div class="floatTeam" id="teamMemberFloat2">
+          <i
+            id="floatTeamX"
+            class="fa-solid fa-xmark"
+            onclick="closegalery2()"
+          ></i>
+
+          <img class="TeamMemberFloatImg" src="./Images/Team_member/Tihanyiné_Perei_Krisztina.jpg" alt="Tihanyiné_Perei_Krisztina">
+          <div class="TeamMemberFloatTxt">
+            <h2>Tihanyi Krisztina</h2>
+            <p class="TeamMemberFloatp">Kiskorom óta vonzott a számok világa, így evidens volt, hogy a hivatásomat is a pénzügyi szektorban fogom megtalálni. Hamar rájöttem, hogy a sokak által keresett precizitást és tervezhetőséget a pénzügy és számvitel világa adja nekem. A crypto világgal 2018-ban ismerkedtem meg, vonzott az újdonsága a változatossága. 
+            </p>
+          </div>
+        </div>
+
+        <div class="floatTeam" id="teamMemberFloat3">
+          <i
+            id="floatTeamX"
+            class="fa-solid fa-xmark"
+            onclick="closegalery3()"
+          ></i>
+
+          <img class="TeamMemberFloatImg" src="./Images/Team_member/Kovács_Konrád.jpg" alt="Kovács Konrád">
+          <div class="TeamMemberFloatTxt">
+            <h2>Kovács Konrád</h2>
+            <p class="TeamMemberFloatp">2016-ban kezdtem el foglalkozni a kriptovaluta világával, első perctől kezdve a technológia érdekelt, a nagy profit(ok) csak második volt számára. Több saját okos-szerződés dolgozoztam (Solidity és Rust nyelven), de volt alkalma dolgozni egy ICO-val kapcsolatos startupban, mint frontend/smart contract fejlesztő. Ebben a projektben amiatt látok fantáziát, mert így az eddig megszerzett tapasztalatommal értéket tudok teremteni a kezdőknek és a haladóknak is egyaránt üzleti, de leginkább technológiai oldalról.
+            </p>
+          </div>
+        </div>
+
+        <div class="floatTeam" id="teamMemberFloat4">
+          <i
+            id="floatTeamX"
+            class="fa-solid fa-xmark"
+            onclick="closegalery4()"
+          ></i>
+
+          <img class="TeamMemberFloatImg" src="./Images/Team_member/Váradi-Szabó_András.jpg" alt="Váradi-Szabó András">
+          <div class="TeamMemberFloatTxt">
+            <h2>Váradi-Szabó András</h2>
+            <p class="TeamMemberFloatp">2018 környékén kezdtem el először foglalkozni a kriptovalutákkal, mint érdekes témakörrel. Fő célom a technológia megértése és megismerése volt. 2020-ban elkezdtem több energiát fektetni a témakörbe és a profitlehetőségek megismerésébe. Ezenkívül az NFT-k világa is elkezdett érdekelni és az, hogy a jövőben milyen felhasználása lesz ezeknek a technológiáknak.
+            </p>
+          </div>
+        </div>
+
+        <div class="floatTeam" id="teamMemberFloat5">
+          <i
+            id="floatTeamX"
+            class="fa-solid fa-xmark"
+            onclick="closegalery5()"
+          ></i>
+        </div>
+
+        <h2>Csapatunk</h2>
+        <div id="TeamMembers">
+          <div class="TeamMember" id="TeamMember1" onclick="opengalery1()">
+            <img
+              class="TeamMemberImg"
+              src="./Images/Team_member/Till_Jozsef_hexagon.png"
+              alt="József _Till profilkép"
+            />
+            <p>Till József</p>
+            <p class="smallerText">Kutatás</p>
+          </div>
+          <div class="TeamMember" id="TeamMember2" onclick="opengalery2()">
+            <img
+              class="TeamMemberImg"
+              src="./Images/Team_member/Tihanyi_Krisztina_hexagon.png"
+              alt="Tihanyiné_Perei_Krisztina profilkép"
+            />
+            <p>Tihanyi Krisztina</p>
+            <p class="smallerText">Pénzügy</p>
+          </div>
+
+          <div class="TeamMember" id="TeamMember3" onclick="opengalery3()">
+            <img
+              class="TeamMemberImg"
+              src="./Images/konrad1.png"
+              alt="Kovács_Konrád profilkép"
+            />
+            <p>Kovács Konrád</p>
+            <p class="smallerText">Ötletgazda/Fejlesztés</p>
+          </div>
+
+          <div class="TeamMember" id="TeamMember4" onclick="opengalery4()">
+            <img
+              class="TeamMemberImg"
+              src="./Images/Team_member/Varadi_Szabo_Andras_hexagon.png"
+              alt="Váradi-Szabó_András profilkép"
+            />
+            <p>Váradi-Szabó András</p>
+            <p class="smallerText">Fejlesztés</p>
+          </div>
+        </div>
+      </article>
+
+      <article id="CaseStudies">
+        <h2>Esettanulmányok</h2>
+        <div id="CS1">
+          <img
+            class="Art4image"
+            src="./Images/crypto_wallet.png"
+            alt="Crypto Wallet"
+          />
+          <p>
+            Miért biztonságosabb egy egyszerű hardvare tárca, mintha egy tőzsdén
+            hagynád? Ebben a esettanulmányban annak járunk utána, hogy egy
+            egyszeri beruházással akár több tíz/száz/ezer/millió forintot is
+            megtudsz magadnak spórolni, mivel te rendelkezel a saját
+            privátkulcsoddal a tárcádhoz. Legtöbben a tokenjüket egy CEX-en azaz
+            Centralized Exchange oldalon tárolják vagy DeFi-on (Decentralized
+            Finance), ahol nem ők rendelkeznek a saját tárcájukkal, ez amiatt is
+            jelenthet gondot, mert a évente több alkalommal sikerül hackereknek
+            betörni ilyen oldalakra ahol képesek lenullázni a felhasználók
+            egyenlegét.
+            <a target="_blank"
+              href="https://www.cryptovantage.com/news/ask-cryptovantage-do-i-really-need-a-hardware-wallet-to-store-bitcoin/#:~:text=Hardware%20Wallet%20Pros&text=Security%3A%20To%20date%2C%20hardware%20wallets,comes%20to%20protecting%20your%20bitcoin. "
+              >Bővebben</a
+            >
+          </p>
+        </div>
+        <div id="CS2">
+          <img
+            class="Art4image"
+            src="./Images/bestoptions.png"
+            alt="Best Crypto wallet for you based on your preferences"
+          />
+          <p>
+            Megtalálni az ember számára a legideálisabb crypto tárcát nagyon sok
+            időbe kerül, nagyon sok alternatíva van jelenleg a piacon,ezenfelül
+            rengeteg olyan tényező van mint például, hogy az ember milyen
+            crypto-t szeretne vásárolni, tárolni, szeretne-e stakelni, milyen
+            blokkláncon elérhetőek ezek a kriptovaluták, milyen módon lehet őket
+            átvinni más platformokra, milyen plusz tulajdonságokkal rendelkeznek
+            az eltérő tárcák. Ha érdekel, hogy neked melyik lenne a
+            legideálisabb tárca,
+            <a target="_blank" href="./questions.html">Itt megtalálod</a>
+          </p>
+        </div>
+        <div id="CS3">
+          <img
+            class="Art4image"
+            src="./Images/hot_wallet_vs_cold_wallet.jpg"
+            alt="Hot wallet versus Cold Wallet"
+          />
+          <p>
+            Biztonság a felhasználói élmény javára? 2016-ban jellemző volt ez a
+            trend, de mára rengeteg olyan hardvare tárca és asztali szoftver áll
+            rendelkezésre, ami nem csak nagy biztonságot ad, hanem emellett
+            nagyon könnyen és gyorsan elsajátítható az alkalmazása. Ha valaki
+            dApp-okat szeretne használni, vagy stake-elni és lending-elni
+            számukra ideálisak lehetnek a Hot Wallet-et a gyors csatlakozás
+            végett, de ezekkel vigyázzanak, hogy milyen oldalnak adnak
+            jogosultságot a tárca használatához.
+            <a target="_blank" href="https://www.youtube.com/watch?v=4BFaxWAYzWU">Bővebben</a>
+          </p>
+        </div>
+      </article>
+      <article id="RoadMap">
+        <h2 id="RoadMapTitle">Road Map</h2>
+        <div class="RoadMapBlockDiv">
+          <div class="RoadMapBlock" id="RoadMapBlock1">
+            <h2>Első nagy blokk</h2>
+            <p>Kis cél</p>
+            <p>Kis cél</p>
+            <p>Kis cél</p>
+          </div>
+          <div class="RoadmapDiamond"></div>
+        </div>
+        
+        <div class="RoadMapBlockDiv">
+          <div class="RoadMapBlock" id="RoadMapBlock2">
+            <h2>Második nagy blokk</h2>
+            <p>Kis cél</p>
+            <p>Kis cél</p>
+            <p>Kis cél</p>
+          </div>
+          <div class="RoadmapDiamond"></div>
+        </div>
+        
+        <div class="RoadMapBlockDiv">
+          <div class="RoadMapBlock" id="RoadMapBlock3">
+            <h2>Harmadik nagy blokk</h2>
+            <p>Kis cél</p>
+            <p>Kis cél</p>
+            <p>Kis cél</p>
+          </div>
+          <div class="RoadmapDiamond"></div>
+        </div>
+        
+        <div class="RoadMapBlockDiv">
+          <div class="RoadMapBlock" id="RoadMapBlock4">
+            <h2>Negyedik nagy blokk</h2>
+            <p>Kis cél</p>
+            <p>Kis cél</p>
+            <p>Kis cél</p>
+          </div>
+        </div>
+        
+      </article>
+      <form
+        id="HomeForm"
+        action="http://szamtud.uni-corvinus.hu/~blang/receive.php"
+        method="post"
+        novalidate
+      >
+        <h2 id="Contact">Kapcsolat</h2>
+        <input id="inName" name="inName" type="text" placeholder="Name" />
+        <input id="inMail" name="inMail" type="email" placeholder="Email" />
+        <textarea
+          id="inMessage"
+          name="inMessage"
+          placeholder="Message"
+        ></textarea>
+        <div class="errorTxt"></div>
+        <input id="ButtonSendMessage" type="submit" value="Küldés" />
+      </form>
+    </div>
+    <script src="./Scripts/landingpage.js"></script>
+    <script src="./Scripts/apiCall.js"></script>
+
+    <footer>
+      <div id="FooterList">
+        <div id="FooterList1">
+          <h2>MEGOLDÁSOK</h2>
+          <p>Marketing</p>
+          <p>Analitika</p>
+          <p>Kereskedelem</p>
+          <p>Betekintés</p>
+        </div>
+        <div id="FooterList2">
+          <h2>TÁMOGATÁS</h2>
+          <p>Árazás</p>
+          <p>Dokumentáció</p>
+          <p>Útmutatók</p>
+          <p>API állapota</p>
+        </div>
+        <div id="FooterList3">
+          <h2>VÁLLALAT</h2>
+          <p>Rólunk</p>
+          <p>Blog</p>
+          <p>Sajtó</p>
+          <p>Partnerek</p>
+        </div>
+        <div id="FooterList4">
+          <h2>JOGI</h2>
+          <p>Követelés</p>
+          <p>Biztonság</p>
+          <p>Feltételek</p>
+        </div>
+      </div>
+      <div id="FooterLent">
+        <p>© 2022 CICR projekt, Inc. All Rights reserved</p>
+        <div id="FooterSocial">
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-github"></a>
+          <a href="#" class="fab fa-dribbble"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  
+</html>

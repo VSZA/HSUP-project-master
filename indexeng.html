@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <title>CICR PROJECT</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="author" content="Váradi-Szabó András">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Style/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Jquery/jquery-3.6.0.js"></script>
+    <script src="./Jquery/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="./Scripts/myScript.js"></script>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/png" href="./Images/CICR_logo_no_bg.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./Scripts/Header.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FXE6TNRFT8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-FXE6TNRFT8");
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PRK3SG3");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+
+  <body id="indexBody">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PRK3SG3"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="container1">
+      <p id="ProjectNameMobile">CICR PROJECT</p>
+
+      <div id="myLinks">
+        <nav>
+          <p id="ProjectName">CICR PROJECT</p>
+          <ul>
+            <li id="ENGHUPage"><a href="./index.html">HU</a></li>
+            <li id="NavSolution" onclick="FunctionSolution()">
+              <a>Our solution</a>
+            </li>
+            <li id="NavProduct" onclick="FunctionProduct()"><a>Product</a></li>
+            <li id="NavTeam" onclick="FunctionTeam()"><a>Team</a></li>
+            <li id="NavCaseStudies" onclick="FunctionCaseStudies()">
+              <a>Case studies</a>
+            </li>
+            <li id="NavContact" onclick="FunctionContact()">
+              <a>Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <i id="MenuIcon" class="fa fa-bars" onclick="menu()"></i>
+
+      <article id="HomeArticle1">
+        <div id="CicrLogoArt1">
+          <img
+            id="CicrLogoPng"
+            src="./Images/CICR_logo_no_bg.png"
+            alt="Céglogó"
+          />
+        </div>
+
+        <div id="Art1Conent">
+          <h2 id="Art1Txt1">Find out which is the most ideal wallet for you.</h2>
+          <div id="Art1Buttons">
+            <button
+              onclick="window.location.href='./questionseng.html';"
+              class="ButtonFillOut"
+              type="button"
+            >
+              Try out
+            </button>
+            <button
+              onclick="FunctionContact()"
+              id="ButtonContactUs"
+              type="button"
+            >
+              Contact
+            </button>
+          </div>
+
+          <div id="info">
+            <div>
+              <h2 class="InfoArt1">$300b</h2>
+              <h2 class="InfoArt1">$1k</h2>
+            </div>
+            <div>
+              <p class="InfoTxtArt1">
+                Money has been<br />circulating in the <br /> wallets we recommend
+              </p>
+              <p class="InfoTxtArt1">
+                User has already <br /> chosen the <br /> wallet we recommend
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="coin-list">
+        <div class="coin">
+          <img
+            src="./Images/bitcoin-btc-logo.png"
+            alt="Bitcoin"
+            width="100"
+            height="100"
+          />
+          <div class="CoinPrice">
+            <h3>$ <span id="bitcoin"></span></h3>
+            <p>Bitcoin</p>
+          </div>
+        </div>
+
+        <div class="coin">
+          <img
+            src="./Images/ethereum-eth-logo.png"
+            alt="Ethereum"
+            width="100"
+            height="100"
+          />
+          <div class="CoinPrice">
+            <h3>$ <span id="eth"></span></h3>
+            <p>Ethereum</p>
+          </div>
+        </div>
+
+        <div class="coin">
+          <img
+            src="./Images/bnb-bnb-logo.png"
+            alt="bnb"
+            width="100"
+            height="100"
+          />
+          <div class="CoinPrice">
+            <h3>$ <span id="bnb"></span></h3>
+            <p>BNB</p>
+          </div>
+        </div>
+      </div>
+
+      <article id="OurSolution">
+        <label class="toggle" id="ButtonUser">
+          <input type="checkbox" onclick="changeOurSolutioneng()" />
+          <span class="slider"></span>
+          <span class="labels" data-on="B2B" data-off="B2C"> </span>
+        </label>
+
+        <h2>Our solution</h2>
+        <p id="oursolution">
+          <b>
+            Our goal was to create an interface for beginners and
+            helps advanced users find the most suitable wallet. For this
+            some questions need to be answered to assess the need
+            needs on the basis of which we offer wallets. We strived to
+            Our offer also includes free, easy-to-use wallets
+            get them to help novice cryptos and also to be more advanced
+            those with knowledge will also find their favorite. We're testing
+            by filling out and accepting offers, more about our users
+            we are trying to take down an hourly load, as the range of wallets is now available
+            it is on a wide spectrum and it is not even certain where we know
+            let's start with the big offer.</b
+          >
+        </p>
+
+        <button
+          id="ButtonInterest"
+          type="button"
+          onclick="window.location.href='./questionseng.html';"
+        >
+        I'm interested
+        </button>
+      </article>
+
+      <article id="Product">
+        <h2>Product</h2>
+        <img
+          id="ProductGif"
+          alt="Gif about the Product"
+          src="./Images/Product1.gif"
+        />
+        <button
+          onclick="window.location.href='./questionseng.html';"
+          class="ButtonFillOut"
+          type="button"
+        >
+          Try out
+        </button>
+      </article>
+      <section id="SaidAboutUs">
+        <div class="heading">Said about us</div>
+        <div class="wrapper">
+          <!-- Testimonials  -->
+          <div class="container">
+            <div class="profile">
+              <div class="imgBox">
+                <img
+                  src="./Images/Said_about_us/Said_about_us1.jpg"
+                  alt="Picture about a people"
+                />
+              </div>
+              <h2>Sandra</h2>
+              <h3>User</h3>
+            </div>
+            <p>
+              <span class="fa fa-quote-left left"></span> As a novice user yet
+              i am just familiar with crypto wallets so super not to have to
+              I would look after each wallet, which would be plenty of time. The test
+              after completing it, tailored to my needs, I got specific
+              recommendations, and after a few clicks, I started using
+              best for me.
+            </p>
+            <span class="fa fa-quote-right right"></span>
+            <div class="social">
+              <a href=""><i class="fab fa-linkedin"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="profile">
+              <div class="imgBox">
+                <img
+                  src="./Images/Said_about_us/Said_about_us2.jpg"
+                  alt="Picture about a people"
+                />
+              </div>
+              <h2>Thomas</h2>
+              <h3>User</h3>
+            </div>
+            <p>
+              <span class="fa fa-quote-left left"></span> Great that I found the site. I found the one for me with minimal time
+              appropriate wallet. Plus point to one click already
+              I was able to get acquainted with the wallet.
+            </p>
+            <span class="fa fa-quote-right right"></span>
+            <div class="social">
+              <a href=""><i class="fab fa-linkedin"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="profile">
+              <div class="imgBox">
+                <img
+                  src="./Images/Said_about_us/Said_about_us3.jpg"
+                  alt="Picture about a people"
+                />
+              </div>
+              <h2>Zsolt</h2>
+              <h3>User</h3>
+            </div>
+            <p>
+              <span class="fa fa-quote-left left"></span> I've been using it for quite some time
+              hard wallet, but so far I haven’t delved into the world of hot wallets
+              into. I find the page very useful based on my answers
+              recommended me a wallet that meets all my needs.
+            </p>
+            <span class="fa fa-quote-right right"></span>
+            <div class="social">
+              <a href=""><i class="fab fa-linkedin"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <article id="Team">
+        <div class="floatTeam" id="teamMemberFloat1">
+          <i
+            id="floatTeamX"
+            class="fa-solid fa-xmark"
+            onclick="closegalery1()"
+          ></i>
+
+          <img class="TeamMemberFloatImg" src="./Images/Team_member/József_Till.jpg" alt="József_Till">
+          <div class="TeamMemberFloatTxt">
+            <h2>Till József</h2>
+            <p class="TeamMemberFloatp">I have spent my professional career in the field of quality management, I have participated in several development projects. It has always been a matter of quality for you to be interested in project management. <br/> I started to get to know the world of crypto a few years ago. Initially, it was difficult to gather the information to get started on the path to investing. The platform provides a solution for this.</p>
+          </div>
+        </div>
+
+        <div class="floatTeam" id="teamMemberFloat2">
+          <i
+            id="floatTeamX"
+            class="fa-solid fa-xmark"
+            onclick="closegalery2()"
+          ></i>
+
+          <img class="TeamMemberFloatImg" src="./Images/Team_member/Tihanyiné_Perei_Krisztina.jpg" alt="Tihanyiné_Perei_Krisztina">
+          <div class="TeamMemberFloatTxt">
+            <h2>Tihanyi Krisztina</h2>
+            <p class="TeamMemberFloatp">The world of numbers has attracted me since I was a kid, so it was obvious that I would find my profession in the financial sector as well. I soon realized that the precision and predictability sought by many is given to me by the world of finance and accounting. I became acquainted with the crypto world in 2018, I was attracted by its variety and its novelty.
+            </p>
+          </div>
+        </div>
+
+        <div class="floatTeam" id="teamMemberFloat3">
+          <i
+            id="floatTeamX"
+            class="fa-solid fa-xmark"
+            onclick="closegalery3()"
+          ></i>
+
+          <img class="TeamMemberFloatImg" src="./Images/Team_member/Kovács_Konrád.jpg" alt="Kovács Konrád">
+          <div class="TeamMemberFloatTxt">
+            <h2>Kovács Konrád</h2>
+            <p class="TeamMemberFloatp">
+              I started working in the world of cryptocurrency in 2016, from the first minute I was interested in technology, the big profit (s) was only second to him. I worked on several of my own smart contracts (in Solidity and Rust) but had the opportunity to work in an ICO-related startup as a frontend / smart contract developer. In this project, I see fantasy because with my experience so far, I can create value for both beginners and advanced people from a business, but mostly technological side.              
+            </p>
+          </div>
+        </div>
+
+        <div class="floatTeam" id="teamMemberFloat4">
+          <i
+            id="floatTeamX"
+            class="fa-solid fa-xmark"
+            onclick="closegalery4()"
+          ></i>
+
+          <img class="TeamMemberFloatImg" src="./Images/Team_member/Váradi-Szabó_András.jpg" alt="Váradi-Szabó András">
+          <div class="TeamMemberFloatTxt">
+            <h2>Váradi-Szabó András</h2>
+            <p class="TeamMemberFloatp">Around 2018, I first started dealing with cryptocurrencies as an interesting topic. My main goal was to understand and learn about technology. In 2020, I started investing more energy in dealing with the topic and learning about profit opportunities. In addition, the world of NFTs has begun to occupy and what the future holds for these technologies.
+            </p>
+          </div>
+        </div>
+
+        <div class="floatTeam" id="teamMemberFloat5">
+          <i
+            id="floatTeamX"
+            class="fa-solid fa-xmark"
+            onclick="closegalery5()"
+          ></i>
+
+        </div>
+        <h2>Team</h2>
+        <div id="TeamMembers">
+          <div class="TeamMember" id="TeamMember1" onclick="opengalery1()">
+            <img
+              class="TeamMemberImg"
+              src="./Images/Team_member/Till_Jozsef_hexagon.png"
+              alt="József _Till profilkép"
+            />
+            <p>Till József</p>
+            <p class="smallerText">Research</p>
+          </div>
+          <div class="TeamMember" id="TeamMember2" onclick="opengalery2()">
+            <img
+              class="TeamMemberImg"
+              src="./Images/Team_member/Tihanyi_Krisztina_hexagon.png"
+              alt="Tihanyiné_Perei_Krisztina profilkép"
+            />
+            <p>Tihanyi Krisztina</p>
+            <p class="smallerText">Finance</p>
+          </div>
+
+          <div class="TeamMember" id="TeamMember3" onclick="opengalery3()">
+            <img
+              class="TeamMemberImg"
+              src="./Images/konrad1.png"
+              alt="Kovács_Konrád profilkép"
+            />
+            <p>Kovács Konrád</p>
+            <p class="smallerText">Owner/Development</p>
+          </div>
+
+          <div class="TeamMember" id="TeamMember4" onclick="opengalery4()">
+            <img
+              class="TeamMemberImg"
+              src="./Images/Team_member/Varadi_Szabo_Andras_hexagon.png"
+              alt="Váradi-Szabó_András profilkép"
+            />
+            <p>Váradi-Szabó András</p>
+            <p class="smallerText">Development</p>
+          </div>
+        </div>
+      </article>
+
+      <article id="CaseStudies">
+        <h2>Case studies</h2>
+        <div id="CS1">
+          <img
+            class="Art4image"
+            src="./Images/crypto_wallet.png"
+            alt="Crypto Wallet"
+          />
+          <p>
+            Why is a simple hardware wallet safer than a stock market
+            would you leave In this case study, we come to the conclusion that one
+            with a single investment of up to several tens / hundred / thousand / million forints
+            you can save yourself because you have your own
+            with your private key to your wallet. Most have their tokens on a CEX i.e.
+            Stored on a Centralized Exchange site or on DeFi (Decentralized
+            Finance), where they do not have their own wallets, which is why
+            can be a problem because hackers succeed several times a year
+            break into such sites where users can reset
+            balance.
+            <a target="_blank"
+              href="https://www.cryptovantage.com/news/ask-cryptovantage-do-i-really-need-a-hardware-wallet-to-store-bitcoin/#:~:text=Hardware%20Wallet%20Pros&text=Security%3A%20To%20date%2C%20hardware%20wallets,comes%20to%20protecting%20your%20bitcoin. "
+              >More</a
+            >
+          </p>
+        </div>
+        <div id="CS2">
+          <img
+            class="Art4image"
+            src="./Images/bestoptions.png"
+            alt="Best Crypto wallet for you based on your preferences"
+          />
+          <p>
+            Finding the most ideal crypto wallet for a person is very much
+            it takes time, there are a lot of alternatives on the market right now, besides
+            there are plenty of factors such as what one is like
+            you want to buy, store crypto, do you want to work with what kind
+            these cryptocurrencies are available in a blockchain and how they can be used
+            transfer to other platforms what extra features they have
+            the different wallets. If you care which one would be for you
+            most ideal wallet,
+            <a target="_blank" href="./questionseng.html">You can find it here</a>
+          </p>
+        </div>
+        <div id="CS3">
+          <img
+            class="Art4image"
+            src="./Images/hot_wallet_vs_cold_wallet.jpg"
+            alt="Hot wallet versus Cold Wallet"
+          />
+          <p>
+            Security for the benefit of the user experience? In 2016, this was typical
+            trend, but today there are plenty of hardware wallets and desktop software available
+            available, which not only provides great security, but also
+            its application is very easy and quick to learn. If somebody
+            You want to use dApps or stake and lend
+            Hot Wallet can be ideal for them to connect quickly
+            for this, but be careful with what side they give
+            permission to use the wallet.
+            <a target="_blank" href="https://www.youtube.com/watch?v=4BFaxWAYzWU">More</a>
+          </p>
+        </div>
+      </article>
+
+      <form
+        id="HomeForm"
+        action="http://szamtud.uni-corvinus.hu/~blang/receive.php"
+        method="post"
+        novalidate
+      >
+        <h2 id="Contact">Contact</h2>
+        <input id="inName" name="inName" type="text" placeholder="Name" />
+        <input id="inMail" name="inMail" type="email" placeholder="Email" />
+        <textarea
+          id="inMessage"
+          name="inMessage"
+          placeholder="Message"
+        ></textarea>
+        <div class="errorTxt"></div>
+        <input id="ButtonSendMessage" type="submit" value="Send Message" />
+      </form>
+    </div>
+    <script src="./Scripts/landingpage.js"></script>
+    <script src="./Scripts/apiCall.js"></script>
+
+    <footer>
+      <div id="FooterList">
+        <div id="FooterList1">
+          <h2>SOLUTIONS</h2>
+          <p>Marketing</p>
+          <p>Analytics</p>
+          <p>Commerce</p>
+          <p>Insight</p>
+        </div>
+        <div id="FooterList2">
+          <h2>SUPPORT</h2>
+          <p>Pricing</p>
+          <p>Documentation</p>
+          <p>Guides</p>
+          <p>API Status</p>
+        </div>
+        <div id="FooterList3">
+          <h2>SUPPORT</h2>
+          <p>About us</p>
+          <p>Blog</p>
+          <p>Press</p>
+          <p>Partners</p>
+        </div>
+        <div id="FooterList4">
+          <h2>LEGAL</h2>
+          <p>Claim</p>
+          <p>Privacy</p>
+          <p>Terms</p>
+        </div>
+      </div>
+      <div id="FooterLent">
+        <p>© 2022 CICR projekt, Inc. All Rights reserved</p>
+        <div id="FooterSocial">
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-github"></a>
+          <a href="#" class="fab fa-dribbble"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  
+</html>
